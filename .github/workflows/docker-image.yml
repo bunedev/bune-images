@@ -49,7 +49,7 @@ jobs:
         file: ./Dockerfile
         builder: ${{ steps.buildx.outputs.name }}
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/bune-blog
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/bune-images
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache
         platforms: linux/amd64,linux/arm64
